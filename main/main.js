@@ -71,10 +71,11 @@ module.exports = function main(str) {
                 for (var k = 0; k < str.length; k++) {
                     var obj = chaArray[numArray[k]]
                     line = "line" + (j + 1)
-
-                    lineStr += obj[line] + " "
+					if (k == str.length - 1)
+                        lineStr += obj[line] + "\n"
+                    else
+                        lineStr += obj[line] + " "
                 }
-                lineStr += "\n"
             }
            return lineStr;
 };
